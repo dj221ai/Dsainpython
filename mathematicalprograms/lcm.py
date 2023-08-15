@@ -2,7 +2,7 @@ def find_lcm():
     n1=int(input("Enter 1st number: "))
     n2=int(input("Enter 2nd number: "))
 
-    # naive solution
+    # naive solution -- # Time Complexity is O(n1*n2 - max(n1,n2))
     greater_nos = 0
     if n1>n2:
         greater_nos=n1
@@ -14,5 +14,8 @@ def find_lcm():
             print(greater_nos)
             break
         greater_nos+=1
+
+
+    
 
 find_lcm()
