@@ -21,7 +21,7 @@ def count_zeros(n):
 count_zeros(10)
 
 
-# optimized solution 
+# optimized solution -- Time Complexity O(log n) and Aux Space -- O(1)
 def countZeros(n):
     i=5
     result=0
