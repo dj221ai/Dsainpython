@@ -27,3 +27,17 @@ if __name__=='__main__':
     n=int(input("Enter nos: "))
     primeFactors(n)
 
+def primeFactorsEfficientMtd(n:int):
+    i=2
+    while(i**2<=n):
+        if isprime(i) == True:
+            temp=i
+            while(n%temp==0):
+                print(i)
+                temp*=i
+        i+=1
+
+if __name__=='__main__':
+    n=int(input("Enter nos: "))
+    primeFactorsEfficientMtd(n)
+
