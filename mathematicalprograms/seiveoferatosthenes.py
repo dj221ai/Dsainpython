@@ -23,11 +23,38 @@ def sieve(n):
     print()
 
 
-
-
-
-
 if __name__=='__main__':
     n=int(input("Enter nos: "))
     sieve(n)
 
+
+def sieveOptimisedMtd(n:int):
+    if n<=1:
+        return
+    primes=list(range(n+1))
+    # print(primes)
+    primes[0]=0
+    primes[1]=0
+    # print(primes)
+    
+    i=2
+    while i**2<=n:
+        if primes[i]:
+            for j in range(i**2, n+1, i):
+                primes[j] = 0
+        
+        i+=1
+
+    # print(primes)
+
+    for k in range(2, n+1):
+        if primes[k]:
+            print(k, end=' ')
+
+
+    print()
+
+
+if __name__=='__main__':
+    n=int(input("Enter nos: "))
+    sieveOptimisedMtd(n)
