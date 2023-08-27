@@ -27,7 +27,7 @@ if __name__=='__main__':
     n=int(input("Enter nos: "))
     sieve(n)
 
-
+# More optimised mtd
 def sieveOptimisedMtd(n:int):
     if n<=1:
         return
