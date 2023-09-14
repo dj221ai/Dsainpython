@@ -13,3 +13,22 @@ if __name__=='__main__':
     lst=[3,1,5,9,561,2311, 561, 22]
     print(reverselist(lst))
 
+
+def reversalist(arr):
+    print("inside list")
+    for i in range(1,len(arr)):
+        # print("i ", i, arr[i])
+        # arr[i]=arr[i-1]
+        for j in range(len(arr)-1, i-1, -1):
+            # print("j ", j, arr[j])
+            # print(arr[j], arr[j-1])
+            arr[j]=arr[j-1]
+
+    return arr
+
+
+if __name__=='__main__':
+    lst=[3,1,5,9,561,2311, 561, 22]
+    print(reversalist(lst))
+    
+
