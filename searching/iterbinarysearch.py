@@ -1,7 +1,7 @@
 def binSearch(arr, n):
-    low,high=0,len(arr) 
+    low,high=0,len(arr)-1
     # pos=-1
-    while low<high:
+    while low<=high:
         mid=(low+high)//2
         if n==arr[mid]:
             # pos=mid
@@ -14,4 +14,4 @@ def binSearch(arr, n):
     return -1
 
 
-print(binSearch([10,23,29,34,45,67], 23))
+print(binSearch(list(range(1,10001)), 12311))
