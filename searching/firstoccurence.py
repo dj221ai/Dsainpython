@@ -19,4 +19,4 @@ def findFirstOccurence(arr, ele):
     return res
 
 
-print(findFirstOccurence([1,10,10,10,20,20,40], 290))
+print(findFirstOccurence([4,10,10,10,20,20,40], 4))
