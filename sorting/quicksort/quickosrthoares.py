@@ -30,6 +30,6 @@ def qSort(arr, l, h):
 
 arr = [8, 4, 7, 9, 3, 10, 5]
 
-qSort(arr, 0, 6)
+qSort(arr, 0, len(arr)-1)
 
 print(*arr)
