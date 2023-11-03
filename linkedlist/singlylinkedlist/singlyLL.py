@@ -29,6 +29,25 @@ def insertAtEnd(head, x):
     currNode.next=Node(x)
     return head
 
+def atPos(head, pos, x):
+    temp=Node(x)
+    if pos==1:
+        temp.next=head
+        return temp
+    
+    currNode=head
+    for _ in range(pos-2):
+        currNode=currNode.next
+        if currNode is None:
+            return head
+
+    temp.next=currNode.next
+    currNode.next=temp
+    return head
+
+    # print(currNode.data, currNode.next)
+
+
 
 
 def traverseAndPrint(head):
@@ -53,11 +72,14 @@ def traverseAndPrint(head):
 # head.next.next=Node(30)
 head=None
 head=insertAtStart(head, 23)
-head=insertAtStart(head, 10)
-head=insertAtStart(head, 33)
+# head=insertAtStart(head, 10)
+# head=insertAtStart(head, 13)
+head=atPos(head, 3, 30)
+# head=atPos(head, 10, 41)
 head=insertAtEnd(head, 14)
-head=insertAtEnd(head, 78)
-head=insertAtEnd(head, 22)
+# head=insertAtEnd(head, 78)
+# head=insertAtEnd(head, 22)
+
 
 traverseAndPrint(head)
 # print(search(head, 10))
