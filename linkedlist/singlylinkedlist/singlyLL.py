@@ -45,8 +45,23 @@ def atPos(head, pos, x):
     currNode.next=temp
     return head
 
-    # print(currNode.data, currNode.next)
+def deleteAtBeginning(head):
+    return None if head is None else head.next
 
+def deleteAtLast(head):
+    if head is None:
+        return None
+    if head.next is None:
+        return None
+    currNode=head
+    while currNode.next.next is not None:
+        currNode=currNode.next
+    
+    currNode.next=None
+    return head
+
+# def deleteGivenPointer(pointer):
+#     if 
 
 
 
@@ -72,14 +87,30 @@ def traverseAndPrint(head):
 # head.next.next=Node(30)
 head=None
 head=insertAtStart(head, 23)
-# head=insertAtStart(head, 10)
-# head=insertAtStart(head, 13)
+head=insertAtStart(head, 10)
+head=insertAtStart(head, 13)
 head=atPos(head, 3, 30)
-# head=atPos(head, 10, 41)
+head=atPos(head, 5, 41)
 head=insertAtEnd(head, 14)
-# head=insertAtEnd(head, 78)
-# head=insertAtEnd(head, 22)
+head=insertAtEnd(head, 78)
+head=insertAtEnd(head, 22)
 
 
 traverseAndPrint(head)
 # print(search(head, 10))
+print()
+print("After deleting head ------------------")
+print()
+# print(deleteAtBeginning(head))
+head=deleteAtBeginning(head)
+traverseAndPrint(head)
+print()
+print("After deleting last ------------------")
+print()
+head=deleteAtLast(head)
+traverseAndPrint(head)
+print()
+print("After deleting pointer position ------------------")
+print()
+# head=deleteGivenPointer(head, 4)
+traverseAndPrint(head)
