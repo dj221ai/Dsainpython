@@ -21,7 +21,7 @@ def lengthOfList(head):
 
     return length
 
-def findNthNodeFromEnd(head, n):
+def findNthNodeFromEndUsingLength(head, n):
     if n>lengthOfList(head):
         return "invlid length"
     curr=head
